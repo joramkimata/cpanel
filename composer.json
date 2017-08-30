@@ -3,7 +3,7 @@
     "description": "The tool which make your laravel project ready to be deployed to your web shared hosting file manager (cpanel file manager)",
     "keywords": ["framework", "laravel", "laravel cpanel hosting", "cpanel", "shared hosting", "web hosting"],
     "require": {
-        "chumper/zipper": "0.5.1",
+        "chumper/zipper": "*",
         "php": ">=5.6.4",
         "illuminate/support": "~5"
     },
