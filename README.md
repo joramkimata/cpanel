@@ -1,7 +1,8 @@
-## Laravel 5 Cpanel
+## Laravel 5 Cpanel Deployer
 
-The tool which make your laravel project ready to be deployed to your web shared hosting file manager (cpanel file manager)
+The tool which makes your laravel project ready to be deployed to your web shared hosting file manager (cpanel file manager)
 
+![alt text](https://arianacosta.com/wp-content/uploads/2017/03/laravel-cpanel.png "Laravel 5 Cpanel Deployer")
 
 
 ### Requirements
