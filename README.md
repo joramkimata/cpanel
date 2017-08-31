@@ -1,7 +1,8 @@
-## Laravel 5 Cpanel
+## Laravel 5 Cpanel Deployer
 
-The tool which make your laravel project ready to be deployed to your web shared hosting file manager (cpanel file manager)
+The tool which makes your laravel project ready to be deployed to your web shared hosting file manager (cpanel file manager)
 
+![alt text](https://biggo6.github.io/img/cpanel.png "Laravel 5 Cpanel Deployer")
 
 
 ### Requirements
@@ -16,16 +17,20 @@ chumper/zipper >= 1.0.1! @ https://github.com/Chumper/Zipper
 a) Run
 
 ```
-composer require biggo6/cpanel dev-master
+composer require biggo6/cpanel 
 ```
 
 b) Add service provider to **/config/app.php** file.
 ```php
 'providers' => [
     ...
-    'Biggo6\Cpanel\Biggo6CpanelServiceProvider',
+    Biggo6\Cpanel\Biggo6CpanelServiceProvider::class,
+    Chumper\Zipper\ZipperServiceProvider::class,
 ],
 ```
+c) add to aliases ``'Zipper' => 'Chumper\Zipper\Zipper'``
+
+d) Recommended but not necessary, run this command ``composer dump-autoload``
 
 
 ### Usage
