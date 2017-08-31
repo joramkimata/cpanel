@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 use Biggo6\Cpanel\Console\Commands\BiggoCpanel;
 
-class Biggo6CpanelProvider extends ServiceProvider
+class Biggo6CpanelServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
