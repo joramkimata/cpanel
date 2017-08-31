@@ -30,7 +30,7 @@ b) Add service provider to **/config/app.php** file.
 ```
 c) add to aliases ``'Zipper' => 'Chumper\Zipper\Zipper'``
 
-
+d) Recommended but not necessary, run this command ``composer dump-autoload``
 
 
 ### Usage
