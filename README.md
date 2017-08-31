@@ -16,7 +16,7 @@ chumper/zipper >= 1.0.1! @ https://github.com/Chumper/Zipper
 a) Run
 
 ```
-composer require biggo6/cpanel dev-master
+composer require biggo6/cpanel 
 ```
 
 b) Add service provider to **/config/app.php** file.
