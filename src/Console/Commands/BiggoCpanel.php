@@ -2,6 +2,7 @@
 namespace Biggo6\Cpanel\Console\Commands;
 use Illuminate\Console\Command;
 use File;
+use Zipper;
 class BiggoCpanel extends Command
 {
     /**
@@ -100,8 +101,8 @@ class BiggoCpanel extends Command
 			$this->info('... ... ... ... .... ....');
 			$this->info('');
 			$files1 = glob(base_path() . '/version.json');
-			Zipper::make(base_path() . '/build/izwebtools/version.json')->add($files1)->close();			
-			Zipper::make(base_path() . '/build/izwebtools/version.json')->extractTo(base_path() . '/build/izwebtools');
+			//Zipper::make(base_path() . '/build/izwebtools/version.json')->add($files1)->close();			
+			//Zipper::make(base_path() . '/build/izwebtools/version.json')->extractTo(base_path() . '/build/izwebtools');
 			$files2 = glob(base_path() . '/composer.json');
 			Zipper::make(base_path() . '/build/izwebtools/composer.json')->add($files2)->close();			
 			Zipper::make(base_path() . '/build/izwebtools/composer.json')->extractTo(base_path() . '/build/izwebtools');
@@ -117,7 +118,7 @@ class BiggoCpanel extends Command
             	unlink('bootstrap.zip');
             	unlink('public.zip');
             	unlink('vendor.zip');
-            	unlink('version.json.zip');
+            	//unlink('version.json.zip');
             	unlink('composer.json.zip');
             	
 			}catch(Exception $x){
