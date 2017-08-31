@@ -33,7 +33,7 @@ class BiggoCpanel extends Command
     public function handle()
     {
         $this->info('');
-		$this->info('Laravel 5 Cpanel! - Building Tool v1.0.0');
+		$this->info('Laravel 5 Cpanel Deployer! - Building Tool v1.0.0');
 		$this->info('Author - Joram Kimata <joramkimata@gmail.com>');
 		$this->info('(C) Izweb Technologies LTD');
 		$this->info('');
