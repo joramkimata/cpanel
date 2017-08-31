@@ -25,8 +25,12 @@ b) Add service provider to **/config/app.php** file.
 'providers' => [
     ...
     Biggo6\Cpanel\Biggo6CpanelServiceProvider::class,
+    Chumper\Zipper\ZipperServiceProvider::class,
 ],
 ```
+c) add to aliases ``'Zipper' => 'Chumper\Zipper\Zipper'``
+
+
 
 
 ### Usage
