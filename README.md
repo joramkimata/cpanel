@@ -24,7 +24,7 @@ b) Add service provider to **/config/app.php** file.
 ```php
 'providers' => [
     ...
-    'Biggo6\Cpanel\Biggo6CpanelServiceProvider::class',
+    Biggo6\Cpanel\Biggo6CpanelServiceProvider::class,
 ],
 ```
 
