@@ -54,36 +54,36 @@ class BiggoCpanel extends Command
 			$this->info('');
 			$this->info('...');
 			$files = glob(base_path() . '/app');
-			Zipper::make(base_path() . '/build/izwebtools/app.zip')->add($files)->close();
-			$path2 = base_path() . '/build/izwebtools/app';		
+			Zipper::make(base_path() . '/build/site/app.zip')->add($files)->close();
+			$path2 = base_path() . '/build/site/app';		
 			if(!File::exists($path2)){
 				$this->info('... ...');
 				$result = File::makeDirectory($path2);	
 			}	
-			Zipper::make(base_path() . '/build/izwebtools/app.zip')->extractTo(base_path() . '/build/izwebtools/app');
+			Zipper::make(base_path() . '/build/site/app.zip')->extractTo(base_path() . '/build/site/app');
 			
 			$this->info('... ... ...');
 			$files_ = glob(base_path() . '/bootstrap');
-			Zipper::make(base_path() . '/build/izwebtools/bootstrap.zip')->add($files_)->close();
-			$path2_ = base_path() . '/build/izwebtools/bootstrap';		
+			Zipper::make(base_path() . '/build/site/bootstrap.zip')->add($files_)->close();
+			$path2_ = base_path() . '/build/site/bootstrap';		
 			if(!File::exists($path2_)){
 				$this->info('... ... ... ...');
 				$result = File::makeDirectory($path2_);	
 			}	
-			Zipper::make(base_path() . '/build/izwebtools/bootstrap.zip')->extractTo(base_path() . '/build/izwebtools/bootstrap');
+			Zipper::make(base_path() . '/build/site/bootstrap.zip')->extractTo(base_path() . '/build/site/bootstrap');
 			$this->info('... ... ... ... ....');
 			$filesu = glob(base_path() . '/vendor');
-			Zipper::make(base_path() . '/build/izwebtools/vendor.zip')->add($filesu)->close();
-			$path2__ = base_path() . '/build/izwebtools/vendor';		
+			Zipper::make(base_path() . '/build/site/vendor.zip')->add($filesu)->close();
+			$path2__ = base_path() . '/build/site/vendor';		
 			if(!File::exists($path2__)){
 				$this->info('... ... ... ... .... ....');
 				$result = File::makeDirectory($path2__);	
 			}	
-			Zipper::make(base_path() . '/build/izwebtools/bootstrap.zip')->extractTo(base_path() . '/build/izwebtools/bootstrap');
+			Zipper::make(base_path() . '/build/site/bootstrap.zip')->extractTo(base_path() . '/build/site/bootstrap');
 			$this->info('');
 			$filesxx = glob(base_path() . '/public');
-		    Zipper::make(base_path() . '/build/izwebtools/public.zip')->add($filesxx)->close();
-			$path2x = base_path() . '/build/izwebtools/public';		
+		    Zipper::make(base_path() . '/build/site/public.zip')->add($filesxx)->close();
+			$path2x = base_path() . '/build/site/public';		
 			if(!File::exists($path2x)){
 				$this->info('... ... ... ... .... ....');
 				$result = File::makeDirectory($path2x);	
@@ -91,7 +91,7 @@ class BiggoCpanel extends Command
 			$this->info('....... ....... ');
 			$this->info('....... ....... ');
 			$this->info('....... ....... ');
-			Zipper::make(base_path() . '/build/izwebtools/public.zip')->extractTo(base_path() . '/build');
+			Zipper::make(base_path() . '/build/site/public.zip')->extractTo(base_path() . '/build');
 			$this->info('....... ....... ');
 			$this->info('....... ....... ');
 			$this->info('....... ....... ');
@@ -99,12 +99,9 @@ class BiggoCpanel extends Command
 			$this->info('At middle of Something ......');
 			$this->info('... ... ... ... .... ....');
 			$this->info('');
-			$files1 = glob(base_path() . '/version.json');
-			Zipper::make(base_path() . '/build/izwebtools/version.json')->add($files1)->close();			
-			Zipper::make(base_path() . '/build/izwebtools/version.json')->extractTo(base_path() . '/build/izwebtools');
 			$files2 = glob(base_path() . '/composer.json');
-			Zipper::make(base_path() . '/build/izwebtools/composer.json')->add($files2)->close();			
-			Zipper::make(base_path() . '/build/izwebtools/composer.json')->extractTo(base_path() . '/build/izwebtools');
+			Zipper::make(base_path() . '/build/site/composer.json')->add($files2)->close();			
+			Zipper::make(base_path() . '/build/site/composer.json')->extractTo(base_path() . '/build/site');
 			
 			$this->info('');
 			$this->info('');
@@ -112,7 +109,7 @@ class BiggoCpanel extends Command
 			$this->info('');
 			try{
 				$old = getcwd();
-            	chdir(base_path() . '/build/izwebtools/');
+            	chdir(base_path() . '/build/site/');
             	unlink('app.zip');
             	unlink('bootstrap.zip');
             	unlink('public.zip');
@@ -129,10 +126,10 @@ class BiggoCpanel extends Command
 				$content_2 = @file_get_contents( base_path() . "/database.php.build");
 				
 				file_put_contents(base_path() . "/build/index.php" , $content_1);
-				file_put_contents(base_path() . "/build/izwebtools/app/config/database.php" , $content_2);
+				file_put_contents(base_path() . "/build/site/app/config/database.php" , $content_2);
 				
 				$sourceDir = base_path() . "/vendor";
-				$destinationDir = base_path() . '/build/izwebtools/vendor';
+				$destinationDir = base_path() . '/build/site/vendor';
 				File::copyDirectory($sourceDir, $destinationDir);
 				
 				
